@@ -2,9 +2,11 @@ import React from 'react'
 import { Carousel } from 'antd'
 import { LeftOutlined, RightOutlined } from '@ant-design/icons'
 import '@/css/my-carousel.scss'
+import crouse01 from '@/assets/images/crouse01.jpg'
+import crouse02 from '@/assets/images/crouse02.jpg'
 
 const contentStyle: React.CSSProperties = {
-  height: 300,
+  height: 400,
   color: 'white',
   fontSize: 100,
   textAlign: 'center',
@@ -12,24 +14,17 @@ const contentStyle: React.CSSProperties = {
 
 const MyCarousel: React.FC = () => {
   return (
-    <Carousel arrows prevArrow={<LeftOutlined />} nextArrow={<RightOutlined />}>
+    <Carousel autoplay arrows prevArrow={<LeftOutlined />} nextArrow={<RightOutlined />}>
       <div>
         <h3
           style={{
-            backgroundColor: 'red',
             ...contentStyle,
           }}>
-          1
+          <img src={crouse01} alt="" />
         </h3>
       </div>
       <div>
-        <h3 style={{ backgroundColor: 'teal', ...contentStyle }}>2</h3>
-      </div>
-      <div>
-        <h3 style={{ backgroundColor: 'yellow', ...contentStyle }}>3</h3>
-      </div>
-      <div>
-        <h3 style={{ backgroundColor: 'blue', ...contentStyle }}>4</h3>
+        <h3 style={{  ...contentStyle }}><img src={crouse02} alt="" /></h3>
       </div>
     </Carousel>
   )
